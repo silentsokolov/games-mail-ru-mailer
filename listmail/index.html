@@ -1,0 +1,152 @@
+<html>
+<head>
+	<title>Создание рассылки для Games.Mail.Ru</title>
+	<meta charset='utf-8'>
+    <script src="jquery-1.7.2.min.js"></script>
+    <script src="scripts.js"></script>
+</head>
+<body>
+<div class="script" style="width: 600px; float: left;">
+	<p><a href="#inst"><strong>Как пользоваться?</strong></a></p>
+	<p><strong>Дата</strong></p>
+	<p>
+		<input placeholder="15 месяц, день недели" id="fmonth_m" type="text">
+	</p>
+	<hr />
+	<p>Начальный текст</p>
+	<p><textarea placeholder="Начальный текст" rows="6" cols="65" id="table_1"></textarea></p>
+	<p>Главная картинка</p>
+	<p>
+		<input placeholder="Картинка" id="fimg_m" type="text">
+		<input placeholder="Ссылка" id="furl_m" type="text">
+		<input placeholder="Заголовок" id="ftext_m" type="text">
+	</p>
+	<div class="input-block">
+		<p>Слот 1</p>
+		<p>
+			<input placeholder="Картинка" id="fimg.0" type="text">
+			<input placeholder="Ссылка" id="furl.0" type="text">
+			<input placeholder="Заголовок" id="ftext.0" type="text">
+		</p>
+		<p>
+			<input placeholder="Картинка" id="fimg.1" type="text">
+			<input placeholder="Ссылка" id="furl.1" type="text">
+			<input placeholder="Заголовок" id="ftext.1" type="text">
+		</p>
+	</div>
+	<a class="add_slot" style="" href="#">+ Add slot</a>
+	<p>Конечный текст</p>
+	<p><textarea id="table_2" placeholder="Конечный текст" rows="6" cols="65" ></textarea></p>
+	<hr />
+	<p>Вставить в рассылку:</p>
+	<p><textarea id="table_3" placeholder="Вставить в рассылку" rows="6" cols="65" readonly="readonly"></textarea></p>
+	<hr />
+	<p id="inst"><strong>Инструкция:</strong></p>
+	<p>1. <strong>Картинки</strong> должны быть загружаны на сайт. Затем из любого места хоть из новости, хоть с главной, хоть из редактора админки: "Копировать URL изображения" (именно <strong>URL изображения</strong>), вставляем в соответствующее поле.</p>
+	<p>2. Ссылки также автоматически становяться вида "r.mail.ru/cln5757", если они иные.
+	<p>3. После заполнения, копируем полученный код в текст рассылки (content.mail.ru), <strong>проверяем</strong>, отправляем.</p>
+	<p>4. Заголовки:<ul><li>@Mail.Ru: Лучшие статьи и видео за неделю</li><li>Свежие новости из мира компьютерных игр</li></ul></p>
+</div>
+<div class='mane' style="float: left;">
+<table border="0" cellpadding="0" cellspacing="0" width="100%"  style="background-color:#474747;"><tr>
+	<td align="center" valign="top" style="padding:40px;">
+		<table border="0" cellpadding="0" cellspacing="0" width="520">
+			<tr style="border-top:1px solid #366898;border-bottom:1px solid #14467a;background-color:#2b659f; background: #356FAC;">
+				<td align="left" style="padding:5px 0px 5px 20px;">
+					<a href="http://games.mail.ru/pc/" title="Игры@Mail.ru" target="_blank">
+                        <img width="150" height="21" alt="mail.ru" src="http://games.mail.ru/img/pc/logos.png">
+                    </a>
+				</td>
+				<td align="right" style="padding:5px 20px 5px 0px;" >
+					<span style="color:#ffffff; font-size:14px; font-weight:bold; font-family:Arial;">Москва</span><br>
+					<span id="month_m" style="color:#ffffff; font-size:12px; font-weight:normal; font-family:Arial;">15 июня, пятница</span>
+				</td>
+			</tr>
+		</table>
+		
+		
+		<table border="0" cellpadding="0" cellspacing="0" width="520" style="background-color:#ffffff;">
+			<tr>
+				<td align="center" style="height:37px; padding:0px 20px; ">
+					<p style="text-align:left; padding:8px 0px;  color:#a1a1a1; font-size:11px; border-bottom:1px solid #eaeaea;font-weight:normal; font-family:Verdana;">Если письмо отображается некорректно, смотрите оригинал <a style="color:#2876b7; font-size:11px; text-decoration:none; font-weight:normal; font-family:Verdana;" href="http://games.mail.ru/pc/" target="_blank">на сайте</a>.</p>
+				</td>
+			</tr>
+			<tr>
+				<td align="center" style="height:37px; padding:0px 20px; ">
+					<p id="start" style="text-align:left;padding:8px 0px; color:#363636; font-size:14px; border-bottom:1px solid #eaeaea;font-weight:normal; font-family:Verdana;">Незаметно пролетели еще семь дней, и перед вами очередной выпуск нашего дайджеста самых интересных статей и видеороликов прошлой недели.</p>
+				</td>
+			</tr>
+			<tr>
+				<td align="center" style="height:37px; padding:13px 20px; ">
+					<a id="url_m" style="width:470px; display:block;padding:3px; -webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px; border:1px solid #e0e0e0;" href="http://r.mail.ru/cln5757/games.mail.ru/pc/articles/feat/game_slavjane/" target="_blank">
+						<img id="img_m" src="http://games.mail.ru/pre_xl_resize/pic/pc/gallery/ef/a5/082ce7ae.png" width="470" border="0" />
+                	</a>
+					<a id="text_m" href="http://r.mail.ru/cln5757/games.mail.ru/pc/articles/feat/game_slavjane/" target="_blank" style="text-decoration:none;margin:5px 0px 0px 2px;color:#2876b7; text-align:left; float:left; font-size:13px;font-weight:bold; font-family:Verdana;">
+						Заголовок 0
+					</a>
+				</td>
+			</tr>
+			<tr>
+				<td align="center" style="height:37px; padding:13px 20px; ">
+					<table border="0" cellpadding="0" cellspacing="0" >
+						<tr>
+							<td align="left">
+								<a id="url.0" style="width:220px; display:block;padding:3px; -webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px; border:1px solid #e0e0e0;" href="http://r.mail.ru/cln5757/games.mail.ru/pc/articles/preview/crysis_3/" target="_blank">
+									<img id="img.0" src="http://games.mail.ru/pre_big_crop/pic/pc/gallery/ef/a5/dddac50b.jpeg"  />
+								</a>
+							</td>
+							<td align="right">
+								<a id="url.1" style="width:220px;display:block;padding:3px; -webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px; border:1px solid #e0e0e0;" href="http://r.mail.ru/cln5757/games.mail.ru/pc/video/star_wars_1313_e3_2012_gameplay_trailer_1/" target="_blank">
+									<img id="img.1" src="http://games.mail.ru/pre_big_crop/pic/pc/gallery/ef/a5/c9b25f90.jpeg"  />
+								</a>
+							</td>
+						</tr>
+							<td align="left">
+								<a id="text.0" href="http://r.mail.ru/cln5757/games.mail.ru/pc/articles/preview/crysis_3/" target="_blank" style="text-decoration:none;margin:5px 0px 0px 0px;color:#2876b7; text-align:left; font-size:13px;font-weight:bold; font-family:Verdana;">
+									Заголовок 1
+								</a>
+							</td>
+
+							<td align="right">
+								<a id="text.1" href="http://r.mail.ru/cln5757/games.mail.ru/pc/video/star_wars_1313_e3_2012_gameplay_trailer_1/" target="_blank" style="text-decoration:none;margin:5px 0px 0px 0px;float: left;padding: 0px 0px 0px 25px;color:#2876b7; text-align:left; font-size:13px;font-weight:bold; font-family:Verdana;">
+									Заголовок 2
+								</a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+		<table border="0" cellpadding="0" cellspacing="0" width="520" style="background-color:#ffffff;">
+			<tr>
+				<td align="center" style="height:37px; padding:0px 20px; ">
+					<p id="end" style="text-align:left;padding:8px 0px; color:#363636; font-size:14px; border-bottom:1px solid #eaeaea;font-weight:normal; font-family:Verdana;">На этом все! Следующий дайджест статей и видео выйдет через неделю, а уже в понедельник в ваших почтовых ящиках появится свежая подборка самых интересных новостей «Игр@Mail.Ru»!</p>
+				</td>
+			</tr>
+			<tr>
+				<td align="center" style="height:37px; padding:13px 10px;  background:#474747;">
+					<p style="color:#ffffff; font-size:11px;font-weight:normal; font-family:Verdana;">
+						Вы получили это письмо, так как подписаны на рассылку на сайте <a href="http://games.mail.ru/pc/" target="_blank" style="text-decoration:none;color:#ffffff; font-size:11px;font-weight:normal; font-family:Verdana;">Игры@Mail.ru</a>.
+					</p>
+				</td>
+			</tr>
+			<tr>
+				<td align="center" style="height:37px; padding:13px 20px; background:#818385; ">
+					<table border="0" cellpadding="0" cellspacing="0" width="470">
+						<tr>
+							<td align="left" style="color:#ffffff; font-size:11px;font-weight:normal; font-family:Verdana;">© 1999 – 2012, Mail.Ru</td>
+							<td align="right" >
+								<a href="http://games.mail.ru/pc/" target="_blank" style="text-decoration:none;color:#ffffff; font-size:11px;font-weight:normal; font-family:Verdana;">
+									Отписаться от рассылки
+								</a>
+							</td>
+						</tr>
+					</table>
+				</td>
+			</tr>
+		</table>
+	</td>
+</tr></table>
+</div>
+</body>
+</html>
