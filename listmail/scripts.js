@@ -71,7 +71,7 @@
 
         function rep_m(){
             // text main
-            $('#start').text($('textarea#table_1').val());
+            $('#start').html($('textarea#table_1').val());
             $('#end').text($('textarea#table_2').val());
             $('#month_m').text($('input[id=fmonth_m]').val());
             // img
