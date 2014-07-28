@@ -6,48 +6,53 @@
 
         // function add slot
         function add_slot(){
-            var INPUT_SLOT = '<p>Слот ' + SLOT_G + '</p> \
-			<p>\
-				<input placeholder="Картинка" id="fimg.' + SLOT + '" type="text">\
-				<input placeholder="Ссылка" id="furl.' + SLOT + '" type="text">\
-				<input placeholder="Заголовок" id="ftext.' + SLOT + '" type="text">\
-			</p>\
-			<p>\
-				<input placeholder="Картинка" id="fimg.' + (SLOT + 1) + '" type="text">\
-				<input placeholder="Ссылка" id="furl.' + (SLOT + 1) + '" type="text">\
-				<input placeholder="Заголовок" id="ftext.' + (SLOT + 1) + '" type="text">\
-			</p>';
+            var INPUT_SLOT = '<span id="input_slot_' + SLOT_G + '">\
+            <p>Слот ' + SLOT_G + '</p> \
+            <p>\
+                <input placeholder="Картинка" id="fimg.' + SLOT + '" type="text">\
+                <input placeholder="Ссылка" id="furl.' + SLOT + '" type="text">\
+                <input placeholder="Заголовок" id="ftext.' + SLOT + '" type="text">\
+            </p>\
+            <p>\
+                <input placeholder="Картинка" id="fimg.' + (SLOT + 1) + '" type="text">\
+                <input placeholder="Ссылка" id="furl.' + (SLOT + 1) + '" type="text">\
+                <input placeholder="Заголовок" id="ftext.' + (SLOT + 1) + '" type="text">\
+            </p>\
+            <p class="remote_slot link" data-number-slot="' + SLOT_G + '">- Remote this slot</p>\
+            <hr />\
+            </span>\
+            ';
 
             var TABLE_SLOT = '\
-		<tr>\
-			<td align="center" style="height:37px; padding:13px 20px; ">\
-				<table border="0" cellpadding="0" cellspacing="0" >\
-					<tr>\
-						<td align="left">\
-							<a id="url.' + SLOT + '" style="width:220px; display:block;padding:3px; -webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px; border:1px solid #e0e0e0;" href="http://r.mail.ru/cln5757/games.mail.ru/pc/articles/review/igra_prestolov/" target="_blank">\
-								<img id="img.' + SLOT + '" src="http://games.mail.ru/pre_big_crop/pic/pc/gallery/ef/a5/afede004.jpeg"  />\
-							</a>\
-						</td>\
-						<td align="right">\
-							<a id="url.' + (SLOT + 1) + '" style="width:220px;display:block;padding:3px; -webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px; border:1px solid #e0e0e0;" href="http://r.mail.ru/cln5757/games.mail.ru/pc/articles/preview/assassin_s_creed_3/" target="_blank">\
-								<img id="img.' + (SLOT + 1) + '" src="http://games.mail.ru/pre_big_crop/pic/pc/gallery/ef/a5/2a0d8b7e.jpeg"  />\
-							</a>\
-						</td>\
-					</tr>\
-						<td align="left">\
-							<a id="text.' + SLOT + '" href="http://r.mail.ru/cln5757/games.mail.ru/pc/articles/review/igra_prestolov/" target="_blank" style="text-decoration:none;margin:5px 0px 0px 0px;color:#2876b7; text-align:left; font-size:13px;font-weight:bold; font-family:Verdana;">\
-								Заголовок\
-							</a>\
-						</td>\
-						<td align="right">\
-							<a id="text.' + (SLOT + 1) + '" href="http://r.mail.ru/cln5757/games.mail.ru/pc/articles/preview/assassin_s_creed_3/" target="_blank" style="text-decoration:none;margin:5px 0px 0px 0px;float: left;padding: 0px 0px 0px 25px;color:#2876b7; text-align:left; font-size:13px;font-weight:bold; font-family:Verdana;">\
-								Заголовок\
-							</a>\
-						</td>\
-					</tr>\
-				</table>\
-			</td>\
-		</tr>';
+        <tr id="table_slot_' + SLOT_G + '">\
+            <td align="center" style="height:37px; padding:13px 20px; ">\
+                <table border="0" cellpadding="0" cellspacing="0" >\
+                    <tr>\
+                        <td align="left" width="228" style="padding-bottom:5px;">\
+                            <a id="url.' + SLOT + '" style="width:220px; display:block;padding:3px; -webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px; border:1px solid #e0e0e0; height:130px;" href="http://r.mail.ru/cln5757/games.mail.ru/pc/articles/review/igra_prestolov/" target="_blank">\
+                                <img id="img.' + SLOT + '" src="http://games.mail.ru/pre_big_crop/pic/pc/gallery/ef/a5/afede004.jpeg"  />\
+                            </a>\
+                        </td>\
+                        <td align="right" width="228" style="padding-left:20px;padding-bottom:5px;">\
+                            <a id="url.' + (SLOT + 1) + '" style="width:220px;display:block;padding:3px; -webkit-border-radius: 3px;-moz-border-radius: 3px;border-radius: 3px; border:1px solid #e0e0e0;" href="http://r.mail.ru/cln5757/games.mail.ru/pc/articles/preview/assassin_s_creed_3/" target="_blank">\
+                                <img id="img.' + (SLOT + 1) + '" src="http://games.mail.ru/pre_big_crop/pic/pc/gallery/ef/a5/2a0d8b7e.jpeg"  />\
+                            </a>\
+                        </td>\
+                    </tr>\
+                        <td align="left" width="228" style="vertical-align:top;">\
+                            <a id="text.' + SLOT + '" href="http://r.mail.ru/cln5757/games.mail.ru/pc/articles/review/igra_prestolov/" target="_blank" style="text-decoration:none;margin:0px 0px 0px 0px;color:#168de2; text-align:left; font-size:13px;font-weight:bold; font-family:Verdana;word-wrap:break-word;width:224px; padding-left:4px; display:block; padding-bottom:13px;">\
+                                Заголовок\
+                            </a>\
+                        </td>\
+                        <td align="right" style="padding-left:20px; width:228px; vertical-align:top;">\
+                            <a id="text.' + (SLOT + 1) + '" href="http://r.mail.ru/cln5757/games.mail.ru/pc/articles/preview/assassin_s_creed_3/" target="_blank" style="text-decoration:none;margin:5px 0px 0px 0px;float: left;padding: 0px 0px 0px 25px;color:#2876b7; text-align:left; font-size:13px;font-weight:bold; font-family:Verdana;">\
+                                Заголовок\
+                            </a>\
+                        </td>\
+                    </tr>\
+                </table>\
+            </td>\
+        </tr>';
 
             $('.input-block').append(INPUT_SLOT);
             $('table:eq(2)').append(TABLE_SLOT);
@@ -94,6 +99,13 @@
             add_slot();
             SLOT += 1;
             INSERT_IN += 1;
+        });
+
+        // button remote slot
+        $('.remote_slot').live('click',function(e) {
+            var slot_id = $(this).attr("data-number-slot");
+            $('#table_slot_'+slot_id).remove();
+            $('#input_slot_'+slot_id).remove();
         });
 
         $(':input').live('change', function() {
