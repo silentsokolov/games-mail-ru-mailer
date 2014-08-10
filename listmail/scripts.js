@@ -7,7 +7,7 @@
         // function add slot
         function add_slot(){
             var INPUT_SLOT = '<span id="input_slot_' + SLOT_G + '">\
-            <p>Слот ' + SLOT_G + '</p> \
+            <p>Слот ' + SLOT_G + ' (<span class="remote_slot link-rm" data-number-slot="' + SLOT_G + '">X</span>)</p> \
             <p>\
                 <input placeholder="Картинка" id="fimg.' + SLOT + '" type="text">\
                 <input placeholder="Ссылка" id="furl.' + SLOT + '" type="text">\
@@ -18,7 +18,6 @@
                 <input placeholder="Ссылка" id="furl.' + (SLOT + 1) + '" type="text">\
                 <input placeholder="Заголовок" id="ftext.' + (SLOT + 1) + '" type="text">\
             </p>\
-            <p class="remote_slot link" data-number-slot="' + SLOT_G + '">- Remote this slot</p>\
             <hr />\
             </span>\
             ';
@@ -64,14 +63,18 @@
             // replace bad url to good url
             var re = /(.*)(\/pic\/pc\/.*jpeg$)/;
             var v = $('input[id=fimg\\.'+slot_int+']').val();
-            var s = v.replace(re, "$2");
-
-            $('#img\\.'+slot_int).attr('src', 'http://games.mail.ru/pre_big_crop' + s);
-            // url
-            $('#url\\.'+slot_int).attr('href', $('input[id=furl\\.'+slot_int+']').val().replace('http://games.mail.ru/', 'http://r.mail.ru/cln5757/games.mail.ru/'));
-            // text
-            $('#text\\.'+slot_int).attr('href', $('input[id=furl\\.'+slot_int+']').val().replace('http://games.mail.ru/', 'http://r.mail.ru/cln5757/games.mail.ru/'));
-            $('#text\\.'+slot_int).text($('input[id=ftext\\.'+slot_int+']').val());
+            if (v != undefined) {
+                console.log(slot_int);
+                console.log(v);
+                var s = v.replace(re, "$2");
+                console.log('fff');
+                $('#img\\.' + slot_int).attr('src', 'http://games.mail.ru/pre_big_crop' + s);
+                // url
+                $('#url\\.' + slot_int).attr('href', $('input[id=furl\\.' + slot_int + ']').val().replace('http://games.mail.ru/', 'http://r.mail.ru/cln5757/games.mail.ru/'));
+                // text
+                $('#text\\.' + slot_int).attr('href', $('input[id=furl\\.' + slot_int + ']').val().replace('http://games.mail.ru/', 'http://r.mail.ru/cln5757/games.mail.ru/'));
+                $('#text\\.' + slot_int).text($('input[id=ftext\\.' + slot_int + ']').val());
+            }
         }
 
         function rep_m(){

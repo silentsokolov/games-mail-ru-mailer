@@ -2,3 +2,9 @@
     color: -webkit-link;
     text-decoration: underline;
 }
+
+.link-rm {
+    color: -webkit-link;
+    text-decoration: underline;
+    color: #cf0005;
+}
