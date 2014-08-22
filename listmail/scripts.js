@@ -44,7 +44,7 @@
                             </a>\
                         </td>\
                         <td align="right" style="padding-left:20px; width:228px; vertical-align:top;">\
-                            <a id="text.' + (SLOT + 1) + '" href="http://r.mail.ru/cln5757/games.mail.ru/pc/articles/preview/assassin_s_creed_3/" target="_blank" style="text-decoration:none;margin:5px 0px 0px 0px;float: left;padding: 0px 0px 0px 25px;color:#2876b7; text-align:left; font-size:13px;font-weight:bold; font-family:Verdana;">\
+                            <a id="text.' + (SLOT + 1) + '" href="http://r.mail.ru/cln5757/games.mail.ru/pc/articles/preview/assassin_s_creed_3/" target="_blank" style="text-decoration:none;margin:0px 0px 0px 0px;float: left;padding: 0px 0px 0px 0px;color:#168de2; text-align:left; font-size:13px;font-weight:bold; font-family:Verdana;word-wrap:break-word;width:224px; padding-left:4px; display:block;padding-bottom:13px;">\
                                 Заголовок\
                             </a>\
                         </td>\
